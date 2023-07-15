@@ -9,4 +9,31 @@
 <h3>Link to the guide: <a href = "https://codelabs.developers.google.com/tensorflowjs-transfer-learning-teachable-machine#2">Google Codelab</a></h3>
 <h2>The Usage:</h2>
 <h3>Step 1: Clone this project</h3>
-<h3>Step 2: </h3>
+<h3>Step 2: Open the web page</h3>
+<div>
+<p>Open the index.html file in your browser. It's likely to look like this:</p>
+<img src = "assets/open.png" alt = ""/>
+</div>
+<div>
+<p>After loading completely, your web page looks like this. You can enter any name of class which you need to classify in the form then click "Save" </p>
+<img src = "assets/form.png" alt = ""/>
+</div>
+<div>
+    <p>Then, click the "Enable Webcam", the web page will ask you to allow the web page to use your camera.Of course, you need to click "Allow" to continue</p>
+</div>
+<div>
+    <p>After that, you can see the video from your camera and 2 buttons named after 2 classname you entered above. Press and hold on each to start collecting data for each class</p>
+    <img src = "assets/class1.png" alt = ""/>
+    <img src = "assets/class2.png" alt = ""/>
+</div>
+
+<h3>Step 3: Train the model</h3>
+<p>Just click on a button named "Train and predict" and be patient because the training progress could last a bit long</p>
+
+<h3>Step 4: Enjoy</h3>
+<p>After the training progress is done, you can see the result of the prediction. The result is the class which has the highest probability</p>
+<img src = "assets/predict1.PNG" alt = ""/>
+<img src = "assets/predict2.PNG" alt = ""/>
+
+<h2>Conclusion</h2>
+<p>Thanks for reading this README file. Hope you enjoy this project</p>
