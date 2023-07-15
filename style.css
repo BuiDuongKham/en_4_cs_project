@@ -1,18 +1,54 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: helvetica, arial, sans-serif;
-    margin: 2em;
 }
 
-h1 {
-    font-style: italic;
-    color: #FF6F00;
+.loading-scene {
+    background: #000;
+    opacity: 90%;
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
+.loading-spin{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-top-color: #000;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
 
 video {
     clear: both;
     display: block;
-    margin: 10px;
     background: #000000;
     width: 640px;
     height: 480px;
@@ -30,4 +66,14 @@ button {
 
 #status {
     font-size:150%;
+}
+.button-area {
+    display: flex;
+}
+#init-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
 }
