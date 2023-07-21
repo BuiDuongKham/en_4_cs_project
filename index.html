@@ -197,7 +197,7 @@
 
     mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
     STATUS.innerText = 'No data collected';
-    LOADING_STATE.remove();
+    LOADING_STATE.classList.add('removed');
 
     // Warm up the model by passing zeros through it once.
     tf.tidy(function () {
@@ -234,6 +234,7 @@
   }
 
   async function trainAndPredict() {
+    LOADING_STATE.classList.remove('removed');
     predict = false;
     tf.util.shuffleCombo(trainingDataInputs, trainingDataOutputs);
     let outputsAsTensor = tf.tensor1d(trainingDataOutputs, 'int32');
@@ -252,6 +253,7 @@
 
   function predictLoop() {
     if (predict) {
+      LOADING_STATE.classList.add('removed');
       tf.tidy(function() {
         let videoFrameAsTensor = tf.browser.fromPixels(VIDEO).div(255);
         let resizedTensorFrame = tf.image.resizeBilinear(videoFrameAsTensor,[MOBILE_NET_INPUT_HEIGHT,
